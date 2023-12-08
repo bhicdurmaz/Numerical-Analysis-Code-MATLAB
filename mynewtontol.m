@@ -1,0 +1,17 @@
+function x = mynewtontol (f , f1 , x0 , tol )
+% Solves f(x) = 0 using Newton ’s method until |f(x)| < tol.
+% Inputs : f -- the function
+% f1 -- it ’s derivative
+% x0 -- starting guess , a number
+% tol -- desired tolerance , runs until |f(x)| < tol
+% Output : x -- the approximate solution
+x = x0 ; % set x equal to the initial guess x0
+y = f ( x );
+i=0;
+while abs( y ) > tol & i < 1000 % Do until the tolerence is reached .
+x = x - y / f1 ( x ); % Newton ;s formula
+y = f ( x );
+i=i+1;
+end
+i
+end

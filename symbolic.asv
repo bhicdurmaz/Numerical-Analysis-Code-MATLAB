@@ -1,0 +1,5 @@
+ syms x y
+ f=x^3
+ f1=diff(f)
+ %F=int(f)
+ 3*F
